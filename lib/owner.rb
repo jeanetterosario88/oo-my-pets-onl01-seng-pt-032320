@@ -53,24 +53,7 @@ class Owner
     def buy_dog(dog)
       dog.owner = self
     end
-    
-    def buy_cat(catname)
-      Cat.all.each do |cat|
-        if cat.name == catname
-         k = cat
-         k.owner = self
-       end
-     end
-   end
-   
-   def buy_dog(dogname)
-      Dog.all.map do |dog|
-        if dog.name == dogname
-         d = dog
-         d.owner = self
-       end
-     end
-   end
+
    
    def walk_dogs
      Dog.all.map do |dog|
